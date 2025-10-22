@@ -19,38 +19,53 @@ const cars = [
     { brand: 'Peugeot', model: '208', fuel: 'metano' }
 ]
 
-const benzina = [];
-const diesel = [];
-const altro = [];
+// const benzina = [];
+// const diesel = [];
+// const altro = [];
 
-//  ciclo for 
-for (let i = 0; i < cars.length; i++) {
-    const car = cars[i];
+// //  ciclo for 
+// for (let i = 0; i < cars.length; i++) {
+//     const car = cars[i];
 
-    if (car.fuel === 'benzina') {
-        benzina.push(car);
-    } else if (car.fuel === 'diesel') {
-        diesel.push(car);
-    } else {
-        altro.push(car);
-    }
+//     if (car.fuel === 'benzina') {
+//         benzina.push(car);
+//     } else if (car.fuel === 'diesel') {
+//         diesel.push(car);
+//     } else {
+//         altro.push(car);
+//     }
 
-}
-console.log(`Queste sono auto a benzina: ${benzina}`);
-console.log(`Queste sono auto a diesel: ${diesel}`);
-console.log(`altre auto: ${altro}`); 
+// }
+// console.log(`Queste sono auto a benzina: ${benzina}`);
+// console.log(`Queste sono auto a diesel: ${diesel}`);
+// console.log(`altre auto: ${altro}`); 
 
-// Ciclo forEach
+// // Ciclo forEach
+// const benzina = [];
+// const diesel = [];
+// const altro = [];
 
-cars.forEach((car) => {
-  if (car.fuel === 'benzina') {
-    benzina.push(car);
-  } else if (car.fuel === 'diesel') {
-    diesel.push(car);
-  } else {
-    altro.push(car);
-  }
-});
-console.log(`Queste sono auto a benzina: ${benzina}`);
-console.log(`Queste sono auto a diesel: ${diesel}`);
-console.log(`altre auto: ${altro}`); 
+
+// cars.forEach((car) => {
+//   if (car.fuel === 'benzina') {
+//     benzina.push(car);
+//   } else if (car.fuel === 'diesel') {
+//     diesel.push(car);
+//   } else {
+//     altro.push(car);
+//   }
+// });
+// console.log(benzina,diesel, altro);
+
+
+
+// Creazione array usando filter
+
+const benzina = cars.filter((car) => car.fuel === 'benzina');
+console.log(benzina);
+const diesel  = cars.filter((car) => car.fuel === 'diesel');
+console.log(diesel);
+const altro   = cars.filter((car) => car.fuel !== 'benzina' && car.fuel !== 'diesel');
+console.log(altro);
+ 
+
