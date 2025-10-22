@@ -7,16 +7,16 @@
 // Infine stampa separatamente i 3 array.
 
 const cars = [
-  { brand: 'Ford', model: 'Fiesta', fuel: 'benzina' },
-  { brand: 'Toyota', model: 'Corolla', fuel: 'diesel' },
-  { brand: 'Honda', model: 'Civic', fuel: 'gpl' },
-  { brand: 'Tesla', model: 'Model 3', fuel: 'elettrico' },
-  { brand: 'Fiat', model: 'Panda', fuel: 'metano' },
-  { brand: 'Volkswagen', model: 'Golf', fuel: 'benzina' },
-  { brand: 'BMW', model: 'Serie 3', fuel: 'diesel' },
-  { brand: 'Audi', model: 'A4', fuel: 'gpl' },
-  { brand: 'Mercedes', model: 'Classe C', fuel: 'elettrico' },
-  { brand: 'Peugeot', model: '208', fuel: 'metano' }
+    { brand: 'Ford', model: 'Fiesta', fuel: 'benzina' },
+    { brand: 'Toyota', model: 'Corolla', fuel: 'diesel' },
+    { brand: 'Honda', model: 'Civic', fuel: 'gpl' },
+    { brand: 'Tesla', model: 'Model 3', fuel: 'elettrico' },
+    { brand: 'Fiat', model: 'Panda', fuel: 'metano' },
+    { brand: 'Volkswagen', model: 'Golf', fuel: 'benzina' },
+    { brand: 'BMW', model: 'Serie 3', fuel: 'diesel' },
+    { brand: 'Audi', model: 'A4', fuel: 'gpl' },
+    { brand: 'Mercedes', model: 'Classe C', fuel: 'elettrico' },
+    { brand: 'Peugeot', model: '208', fuel: 'metano' }
 ]
 
 const benzina = [];
@@ -26,6 +26,16 @@ const altro = [];
 
 for (let i = 0; i < cars.length; i++) {
     const car = cars[i];
-    
-    
+
+    if (car.fuel === 'benzina') {
+        benzina.push(car);
+    } else if (car.fuel === 'diesel') {
+        diesel.push(car);
+    } else {
+        altro.push(car);
+    }
+
 }
+console.log(`Queste sono auto a benzina: ${benzina}`);
+console.log(`Queste sono auto a diesel: ${diesel}`);
+console.log(`altre auto: ${altro}`);
