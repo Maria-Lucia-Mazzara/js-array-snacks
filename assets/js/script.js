@@ -23,7 +23,7 @@ const benzina = [];
 const diesel = [];
 const altro = [];
 
-
+//  ciclo for 
 for (let i = 0; i < cars.length; i++) {
     const car = cars[i];
 
@@ -38,4 +38,19 @@ for (let i = 0; i < cars.length; i++) {
 }
 console.log(`Queste sono auto a benzina: ${benzina}`);
 console.log(`Queste sono auto a diesel: ${diesel}`);
-console.log(`altre auto: ${altro}`);
+console.log(`altre auto: ${altro}`); 
+
+// Ciclo forEach
+
+cars.forEach((car) => {
+  if (car.fuel === 'benzina') {
+    benzina.push(car);
+  } else if (car.fuel === 'diesel') {
+    diesel.push(car);
+  } else {
+    altro.push(car);
+  }
+});
+console.log(`Queste sono auto a benzina: ${benzina}`);
+console.log(`Queste sono auto a diesel: ${diesel}`);
+console.log(`altre auto: ${altro}`); 
