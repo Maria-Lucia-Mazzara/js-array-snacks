@@ -18,3 +18,14 @@ const cars = [
   { brand: 'Mercedes', model: 'Classe C', fuel: 'elettrico' },
   { brand: 'Peugeot', model: '208', fuel: 'metano' }
 ]
+
+const benzina = [];
+const diesel = [];
+const altro = [];
+
+
+for (let i = 0; i < cars.length; i++) {
+    const car = cars[i];
+    
+    
+}
